@@ -1,0 +1,224 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    transition: all .5s linear;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #3498db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0px;
+}
+
+.box{
+    width: 60%;
+    min-height: 90vh;
+    background-color: white;
+    border-radius: 10px;
+    padding: 3rem .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-container{
+    width: 80%;
+    box-shadow: 0px 0px 5px gray;
+    display: flex;
+    border-radius: 5px;
+    justify-content: flex-start;
+}
+
+.input-container .input{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.input-container .todo-btn{
+    width: 150px;
+    padding: 1rem;
+    background-color: green;
+    color: white;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.todo-btn:hover{
+    cursor: pointer;
+    background-color: darkgreen;
+}
+
+.todo-lists{
+    list-style: none;
+    width: 80%;
+    margin-top: 1.5rem;
+}
+
+.todo-lists li{
+   background-color: #2c3e50;
+   padding: .5rem;
+   border-radius: 5px;
+   color: white;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin: 5px 0px;
+   user-select: none;
+}
+
+.todo-lists li .dlt-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d35400;
+    color: white;
+    padding: 1rem;
+    width: 10%;
+
+}
+
+.listItem-div{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    padding: .85rem;
+    word-break: break-all;
+}
+
+.listItem-div .myCheck{
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.listItem-div:hover,
+.dlt-div:hover{
+    cursor: pointer;
+}
+
+.listItem-div.done{
+    text-decoration: line-through;
+    color: black;
+    background-color: #95a5a6;
+}
+
+@media (max-width: 825px) {
+    .box{
+        width: 80%;
+    }
+}
+
+@media (max-width: 650px) {
+    .box{
+        width: 90%;
+    }
+}
+
+@media (max-width: 615px) {
+    .input-container .input{
+        padding: .85rem;
+        font-size: 1.2rem;
+    }
+    
+    .input-container .todo-btn{
+        padding: .5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 540px) {
+    .container{
+        padding-top: 0px;
+        background-color: white;
+    }
+    .box{
+        border-radius: 0px;
+        width: 100%;
+        padding-top: 3.5rem;
+        height: 100vh;
+    }
+}
+
+@media (max-width: 490px) {
+    .input-container{
+        width: 90%;
+    }
+
+    .todo-lists{
+        width: 90%;
+    }
+}
+
+@media (max-width: 435px) {
+    .input-container .input{
+        font-weight: normal;
+        font-size: 1rem;
+        padding: .5rem;
+    }
+
+    .input-container .todo-btn{
+        font-size: .85rem;
+        padding: .25rem;
+    }
+
+    .todo-lists li{
+        padding: .25rem;
+    }
+
+    .todo-lists li .dlt-div{
+        padding: .85rem;
+    }
+
+    .listItem-div{
+        padding: .5rem;
+    }
+
+    .listItem-div .myCheck{
+        font-size: .85rem;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 350px) {
+    .input-container .input{
+        padding: .25rem;
+        font-size: .90rem;
+    }
+
+    .input-container .todo-btn{
+        font-size: .85rem;
+        padding: 3px 5px;
+    }
+
+    .listItem-div{
+        padding: 5px 8px;
+    }
+
+    .todo-lists li{
+        padding: 0px;
+    }
+
+    .todo-lists li .dlt-div{
+        padding: 10px;
+    }
+
+    .listItem-div .myCheck{
+        font-size: .75rem;
+    }
+}
